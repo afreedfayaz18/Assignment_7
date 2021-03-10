@@ -1,13 +1,9 @@
+def divide():
+    return 5/0
+
 try:
-	print("open a resource")
-	a=5
-	print("a=",a)
-	b=0
-	print("b=",b)
-	c=a/b
-	print(c)
-	print("succesfull")
-except Exception as e:
-	print("zero division not possible",e)
-finally:
-	print("closed resource")
+    divide()
+except ZeroDivisionError as ze:
+    print("Why on earth you are dividing a number by ZERO!!")
+except:
+    print("Any other exception")
